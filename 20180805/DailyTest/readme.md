@@ -47,3 +47,33 @@
 	```
 	C PROGRAM IS MY FAVORITE
 	```
+	
+2.	拓扑排序
+
+	软件专业的学生要学习一系列课程，其中有些课程有先修课，具体关系如下
+
+	```
+	课程编号		先修课程编号
+	
+	1		None
+	2		1
+	3		1 2
+	4		1
+	5		3 4
+	6		11
+	7		3 5
+	8		3 6
+	9		None
+	10		9
+	11		9
+	12		1 9 10
+	```
+
+	请制定教学计划，使学生能在最短时间内完成这些课程
+
+
+	本题可套用模板，参考链接如下
+
+	*	[https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md)
+
+	*	[https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp)
