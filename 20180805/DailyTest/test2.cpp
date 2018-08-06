@@ -26,13 +26,14 @@ vector<Course> courseList;
 
 
 // 套用 BFS 模板即可
-// 先找到所有入度为0的课程的id，即没有前置课程的id，放到队列里面
-// 然后分别将id的后续课程的入度-1
-// 如果出现了新的入度为0的课程，则将其放入队列，同时学期数+1
+// L37~l42, 先找到所有入度为0的课程的id，即没有前置课程的id，放到队列里面
+// L52, 然后分别将id的后续课程的入度-1
+// L51~L59, 如果出现了新的入度为0的课程，则将其放入队列，同时学期数+1
 bool isTopo(int n){
 	int cnt = 0;
-	queue<Course> q;
+	queue<Course> q;	// q是待学习课程的队列
 
+	// 把所有【没有前置课程的】课push到queue中
 	for( int i = 1; i <= n; i++ ){
 		if( inDegree[i] == 0 ){
 			Course course(i);
@@ -44,14 +45,14 @@ bool isTopo(int n){
 		Course now = q.front();
 		courseList.push_back(now);
 		cnt++;
-		q.pop();
+		q.pop();	// 前置课程now出队
 		
 
 		for( int id : G[now.id] ){
-			inDegree[id]--;
+			inDegree[id]--;	// 编号为id的课，其前置课程now.id已经学完了，所以入度-1
 			if( inDegree[id] == 0 ){
-				Course next(id);
-				next.term = now.term + 1;
+				Course next(id);		// 假设这门课为next，如果next的前置课程now都已经学完了, 也就是next的入度为0，那么next就可以进入待学习的队列q了
+				next.term = now.term + 1;	// 课程next的学期 = 课程now的学期 + 1
 				cntTerm++;
 				q.push(next);
 			}
@@ -60,6 +61,7 @@ bool isTopo(int n){
 	return cnt == n;
 }
 
+// 获取课程的前置关系
 void getInput(int n){
 	for( int v1 = 1; v1 <= n; v1++ ){
 		int k;
@@ -73,6 +75,7 @@ void getInput(int n){
 	}
 }
 
+// 输出每个学期要学习的课程
 void printCourseOfEveryTerm(){
 	vector< set<int> > termList;
 	termList.resize(cntTerm);
