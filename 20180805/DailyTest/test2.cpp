@@ -1,8 +1,6 @@
 /*
 如果发现了bug或者有更好的解法，欢迎发出issue和PR
 :p
-
-TODO: 各个学期的课程分开
 */
 #include <iostream>
 #include <queue>
