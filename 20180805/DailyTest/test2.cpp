@@ -60,10 +60,7 @@ bool isTopo(int n){
 	return cnt == n;
 }
 
-void getInput(){
-	int n;
-	cin>>n;
-
+void getInput(int n){
 	for( int v1 = 1; v1 <= n; v1++ ){
 		int k;
 		cin>>k;
@@ -94,7 +91,10 @@ void printCourseOfEveryTerm(){
 }
 
 int main(){
-	getInput()
+	int n;
+	cin>>n;
+
+	getInput(n);
 
 	cout<<'\n';
 	
