@@ -72,8 +72,11 @@
 	请制定教学计划，使学生能在最短时间内完成这些课程
 
 
-	本题可套用模板，参考链接如下
+	本题可套用拓扑排序模板以及BFS层序遍历模板，参考链接如下
 
-	*	[https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md)
+	*	[topo, https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/%E6%B5%99%E5%A4%A7%E6%9C%BA%E8%AF%95%E6%A8%A1%E6%8B%9F%E8%B5%9B/1011/readme.md)
 
-	*	[https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp)
+	*	[topo, https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp](https://github.com/jJayyyyyyy/OJ/blob/19fec4ec6c03792b5391dad77dbe73bcb64a89e9/PAT/advanced_level/1146_Topological_Order/topological_order.cpp)
+	
+	*	[BFS, https://github.com/jJayyyyyyy/cs/blob/master/data%20structure/tree/%E9%81%8D%E5%8E%86/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.cpp](https://github.com/jJayyyyyyy/cs/blob/master/data%20structure/tree/%E9%81%8D%E5%8E%86/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.cpp)
+	
