@@ -12,10 +12,10 @@ dataseg ends
 codeseg segment
 	assume cs:codeseg, ds:dataseg
 start:
-	mov ax, dataseg		; ax 是中介
-	mov ds, ax			; dataseg 必须通过 ax 传递给 ds
+	mov ax, dataseg
+	mov ds, ax		; ax 是中介, dataseg 必须通过 ax 传递给 ds
 
-	lea dx, info	; 效果与 mov dx, offset info 相同
+	lea dx, info		; 效果与 mov dx, offset info 相同
 	mov ah, 09h		; 09h的功能是输出字符串
 	int 21h			; 结合ah的值进行系统调用
 
@@ -28,26 +28,26 @@ getUsername:
 	int 21h
 	cmp al, 13		; 判断输入的是否为回车 (ASCII = 13)
 	jz output		; 如果是回车就结束输入，跳到输出函数
-	mov [bx], al	; 输入的字符会进入 al, char ch = al
-					; char * p = bx[i]
-					; *p = ch
-					; bx 是指针数组的下标, [bx] 是 bx 所指的内容
+	mov [bx], al		; 输入的字符会进入 al, char ch = al
+				; char * p = bx[i]
+				; *p = ch
+				; bx 是指针数组的下标, [bx] 是 bx 所指的内容
 
 	inc bx			; bx++, 指针向前移动
-	jmp getUsername	; 循环, 重复上述过程
+	jmp getUsername		; 循环, 重复上述过程
 
 output:
 	mov dl, 13		; 等效于 mov dx, 13，13是 ASCII 的回车
 	mov ah, 2		; 输出字符，也就是上面的回车
 	int 21h
 
-	mov dx, offset hello		; 效果与 lea dx, hello 相同
-								; 定位到 hello 字符数组的起点
-	mov ah, 09h					; 09h 功能是输出字符串
+	mov dx, offset hello	; 效果与 lea dx, hello 相同
+				; 定位到 hello 字符数组的起点
+	mov ah, 09h		; 09h 功能是输出字符串
 	int 21h
 
 	mov byte ptr [bx], '$'		; 增加结束符 '$', 相当于C中的 '\0'
-								; bx 表示下标, [] 表示内容, byte ptr 是宽度
+					; bx 表示下标, [] 表示内容, byte ptr 是宽度
 	mov dx, offset username		; 定位到 username 字符数组的起点
 	mov ah, 09h
 	int 21h
