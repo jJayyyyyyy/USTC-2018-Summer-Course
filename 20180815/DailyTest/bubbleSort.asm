@@ -27,7 +27,7 @@ getUsername:
 		inc bx
 	loop L0
 
-	mov dl, 10				; 先回车换行 '\r'
+	mov dl, 10				; 先回车换行 '\n'
 	mov ah, 2
 	int 21h
 
