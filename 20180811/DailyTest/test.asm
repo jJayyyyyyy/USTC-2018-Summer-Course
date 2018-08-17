@@ -13,7 +13,7 @@ codeseg segment
 	assume cs:codeseg, ds:dataseg
 start:
 	mov ax, dataseg
-	mov ds, ax		; ax 是中介, dataseg 必须通过 ax 传递给 ds
+	mov ds, ax		; ax 是中转站, dataseg 必须通过 ax 传递给 ds
 
 	lea dx, info		; 效果与 mov dx, offset info 相同
 	mov ah, 09h		; 09h的功能是输出字符串
@@ -26,8 +26,8 @@ start:
 getUsername:
 	mov ah, 1		; 输入单个字符, 无缓冲, 输入的字符会放在 al 中
 	int 21h
-	cmp al, 13		; 判断输入的是否为回车 (ASCII = 13)
-	jz output		; 如果是回车就结束输入，跳到输出函数
+	cmp al, 13		; 判断输入的是否为回车 (ASCII = 13), 判断结果放在 FLAGS 寄存器中
+	jz output		; 如果是回车就结束输入，跳到输出函数, jump zero 根据 FLAGS 寄存器的值进行跳转
 	mov [bx], al		; 输入的字符会进入 al, char ch = al
 				; char * p = bx[i]
 				; *p = ch
@@ -52,6 +52,7 @@ output:
 	mov ah, 09h
 	int 21h
 
+; 顺序执行，即使没有jmp到这里，也会在ouput结束后执行exit
 exit:
 	mov ah, 4ch		; 功能相当于 return 0, 结束程序, 返回的值由 al 决定
 	int 21h
