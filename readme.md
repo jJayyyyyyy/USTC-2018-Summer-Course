@@ -16,6 +16,8 @@
 
 *	数据库系统及应用
 
+![syllabus](https://img3.doubanio.com/view/group_topic/l/public/p128537776.webp)
+
 <br><br>
 
 ##	补课时间:
