@@ -90,3 +90,7 @@
 
 	*	[参考链接, How to Debug C Program using gdb in 6 Simple Steps](https://www.thegeekstuff.com/2010/03/debug-c-program-using-gdb/)
 
+	*	[参考链接, man gcc](https://linux.die.net/man/1/gcc)
+
+	*	[参考链接, man gdb](https://linux.die.net/man/1/gdb)
+
