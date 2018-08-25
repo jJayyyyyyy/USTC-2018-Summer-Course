@@ -67,4 +67,6 @@
 
 	*	[w3schools - SQL ](https://www.w3schools.com/sql)
 
+	*	[SQL 笔记](https://github.com/jJayyyyyyy/cs/tree/master/SQL)
+
 	<br>
