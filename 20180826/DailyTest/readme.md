@@ -22,19 +22,27 @@
 
 		*	关闭连接
 
+<br>
+
 *	描述TCP建立连接三次握手和断开连接四次挥手过程
+
+	![connect](https://github.com/jJayyyyyyy/USTC-2018-Summer-Course/blob/master/20180826/DailyTest/assets/connect.png)
+
+	![disconnect](https://github.com/jJayyyyyyy/USTC-2018-Summer-Course/blob/master/20180826/DailyTest/assets/disconnect.png)
+
+<br>
 
 *	下列服务对应的端口号
 
-	FTP: 
+	FTP: 20, 21
 
-	HTTP: 
+	HTTP: 80
 
-	HTTPS: 
+	HTTPS: 443
 
-	Telnet: 
+	Telnet: 23
 
-	SMTP: 
+	SMTP: 25
 
 <br>
 
