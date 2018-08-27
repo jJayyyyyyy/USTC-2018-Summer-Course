@@ -6,9 +6,9 @@ server_host = '127.0.0.1'
 port = 8000
 
 while True:
-	data = input('msg to be sent: ')
-	s.sendto(data.encode('utf-8'), (server_host, port))
-	if not data:
+	msg = input('msg to be sent: ')
+	s.sendto(msg.encode('utf-8'), (server_host, port))
+	if not msg:
 		print('Quit!\n')
 		break
 	print( 'msg from server: %s\n' % s.recv(1024).decode('utf-8') )
